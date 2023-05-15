@@ -1,0 +1,11 @@
+m=load('M.txt');n=50;
+temp=input('起点');
+s=input('终点');
+[mydistance,mypath,time]=mydijkstra(m,temp,s);
+plot(mypath,'-bp');
+title('路由示意图');
+set(gca,'xtick',1:1:n);%设置x轴
+set(gca,'ytick',1:1:n);%设置y轴
+xlabel('第x跳路由');
+ylabel('端点Vy');
+axis([1,n,1,n]);
